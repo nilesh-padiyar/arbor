@@ -1,0 +1,25 @@
+
+# Build output
+arbor
+
+# Object files
+*.o
+
+# Debug symbols
+*.dSYM/
+
+# Coverage files
+*.gcda
+*.gcno
+*.gcov
+
+# Editors
+.vscode/
+.zed/
+
+# Vim/Neovim
+*.swp
+*.swo
+
+# OS files
+.DS_Store
