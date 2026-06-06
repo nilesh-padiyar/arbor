@@ -1,6 +1,6 @@
 
 CC = gcc
-CFLAGS = -std=c11 -Wall -Wextra -pedantic
+CFLAGS = -std=c11 -Wall -Wextra
 
 SRC = $(wildcard src/*.c)
 OUT = arbor
