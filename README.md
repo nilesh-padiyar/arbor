@@ -10,6 +10,12 @@ Built as a learning project, Arbor focuses on simplicity, readability, and under
 
 ---
 
+## Demo
+
+![Arbor Demo](assets/demo.gif)
+
+---
+
 ## Features
 
 * 🌳 Recursive directory traversal
