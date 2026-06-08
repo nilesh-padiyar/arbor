@@ -1,0 +1,9 @@
+# Normalize text files
+* text=auto eol=lf
+
+# Source code
+*.c  text
+*.h  text
+
+# Documentation
+*.md text
