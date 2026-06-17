@@ -30,17 +30,20 @@ Built as a learning project, Arbor focuses on simplicity, readability, and under
 ## Project Structure
 
 ```text
-.
+arbor
+├── assets/
+│   └── demo.gif
 ├── src/
-│   ├── main.c
-│   ├── tree.c
 │   ├── fs.c
 │   ├── fs.h
+│   ├── main.c
+│   ├── tree.c
 │   └── tree.h
-├── LICENSE
-├── README.md
 ├── CONTRIBUTING.md
-└── Makefile
+├── LICENSE
+├── Makefile
+├── README.md
+└── arbor
 ```
 
 ---
@@ -107,7 +110,7 @@ Rather than relying on existing libraries, the goal is to understand how tree-st
 
 ## Current Status
 
-Arbor is currently in **v0.2.0** and under active development.
+Arbor is currently in **v0.3.0** and under active development.
 
 The project is functional but still evolving as new features and improvements are added.
 
