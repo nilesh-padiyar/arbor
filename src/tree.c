@@ -8,8 +8,11 @@
 
 void arbor_visit(const char *base_path,
                  int depth,
-                 int branches[])
+                 int branches[],
+                 tree_stats_t *stats)
 {
+    stats->directories++;
+
     struct dirent *entries[MAX_ENTRIES];
 
     int count = fs_collect_entries(base_path, entries);
@@ -55,10 +58,13 @@ void arbor_visit(const char *base_path,
 
             arbor_visit(next_path,
                         depth + 1,
-                        branches);
+                        branches,
+                        stats);
         }
         else
         {
+            stats->files++;
+
             printf("%s\n", entity->d_name);
         }
     }

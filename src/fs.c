@@ -6,6 +6,22 @@
 
 #include "fs.h"
 
+static int compare_entries(const void *a, const void *b)
+{
+    const struct dirent *left = *(const struct dirent **)a;
+    const struct dirent *right = *(const struct dirent **)b;
+
+    int left_is_dir = left->d_type == DT_DIR;
+    int right_is_dir = right->d_type == DT_DIR;
+
+    if (left_is_dir != right_is_dir)
+    {
+        return right_is_dir - left_is_dir;
+    }
+
+    return strcmp(left->d_name, right->d_name);
+}
+
 int fs_collect_entries(const char *path, struct dirent *entries[])
 {
     DIR *dir = opendir(path);
@@ -37,6 +53,11 @@ int fs_collect_entries(const char *path, struct dirent *entries[])
 
         count++;
     }
+
+    qsort(entries,
+          count,
+          sizeof(struct dirent *),
+          compare_entries);
 
     closedir(dir);
 
